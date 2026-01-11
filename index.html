@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Home page of Gabriel Perez Sanchez website, this html file serves as the main entry point.">
+  <meta name="description" content="Home page of Gabriel Perez Sanchez showcasing coursework, projects, and web development fundamentals for the WDD program.">
   <meta name="author" content="Gabriel Perez Sanchez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Home Page | Gabriel Perez Sanchez</title>
-  <script src="scripts/scripts.js" defer></script>
-  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/scripts.js" defer></script>
 </head>
 
 <body>
 
 <header>
-  <img src="images/logo.svg" alt="Site Logo">
-  <span>Gabriel Perez Sanchez</span>
-  <button class="hamburger">☰</button>
+  <img src="images/logo.svg" alt="Gabriel Perez Sanchez web development site logo">
+  <span class="site-name">Gabriel Perez Sanchez</span>
+  <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
 </header>
 
 <nav>
@@ -31,25 +38,27 @@
   <h1>Home</h1>
 
   <section>
-    <h2>Section One</h2>
-    <p>Content goes here.</p>
+    <h2>About This Site</h2>
+    <p>This website serves as the course home page for the WDD program, showcasing assignments, coursework, and web development fundamentals.</p>
   </section>
 
   <section>
-    <h2>Section Two</h2>
-    <p>Content goes here.</p>
+    <h2>Learning Goals</h2>
+    <p>The focus of this course is responsive design, accessibility, semantic HTML, modern CSS, and JavaScript fundamentals.</p>
   </section>
 
   <section>
-    <h2>Section Three</h2>
-    <p>Content goes here.</p>
-  </section>
+    <h2>Course Work</h2>
 
-  <section>
-  <h2>Courses</h2>
-  <div id="courses"></div>
-  <p id="totalCredits"></p>
-</section>
+    <div class="filters">
+      <button id="all">All</button>
+      <button id="cse">CSE</button>
+      <button id="wdd">WDD</button>
+    </div>
+
+    <div id="courses"></div>
+    <p id="totalCredits"></p>
+  </section>
 </main>
 
 <footer>
@@ -62,5 +71,6 @@
 
   <p id="lastModified"></p>
 </footer>
+
 </body>
 </html>
