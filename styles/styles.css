@@ -15,7 +15,6 @@ body {
   color: #222;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -39,7 +38,6 @@ header img {
   cursor: pointer;
 }
 
-/* Navigation */
 nav {
   margin: 1rem 0;
 }
@@ -61,7 +59,6 @@ nav a:focus {
   background-color: #ddd;
 }
 
-/* Main layout */
 main {
   display: grid;
   gap: 1rem;
@@ -73,7 +70,6 @@ section {
   border-radius: 6px;
 }
 
-/* Courses */
 .filters {
   display: flex;
   gap: 0.5rem;
@@ -108,7 +104,6 @@ section {
   border-left: 5px solid #28a745;
 }
 
-/* Footer */
 footer {
   margin-top: 2rem;
   padding-top: 1rem;
