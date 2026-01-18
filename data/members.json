@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Tech Solutions",
+      "address": "123 Main St, City",
+      "phone": "555-123-4567",
+      "website": "https://example.com",
+      "image": "techsolutions.webp",
+      "membership": 3,
+      "description": "IT services and consulting."
+    },
+    {
+      "name": "Green Market",
+      "address": "45 Oak Ave, City",
+      "phone": "555-987-6543",
+      "website": "https://example.com",
+      "image": "greenmarket.webp",
+      "membership": 2,
+      "description": "Organic food market."
+    },
+    {
+      "name": "City Fitness",
+      "address": "78 Fitness Rd, City",
+      "phone": "555-222-3333",
+      "website": "https://example.com",
+      "image": "cityfitness.webp",
+      "membership": 1,
+      "description": "Local gym and wellness center."
+    },
+    {
+      "name": "Bright Dental",
+      "address": "12 Smile Blvd, City",
+      "phone": "555-444-5555",
+      "website": "https://example.com",
+      "image": "brightdental.webp",
+      "membership": 2,
+      "description": "Family dental services."
+    },
+    {
+      "name": "Auto Pro",
+      "address": "90 Motor Way, City",
+      "phone": "555-666-7777",
+      "website": "https://example.com",
+      "image": "autopro.webp",
+      "membership": 1,
+      "description": "Auto repair and maintenance."
+    },
+    {
+      "name": "Skyline Realty",
+      "address": "300 Tower St, City",
+      "phone": "555-888-9999",
+      "website": "https://example.com",
+      "image": "skylinerealty.webp",
+      "membership": 3,
+      "description": "Real estate services."
+    },
+    {
+      "name": "Sun Café",
+      "address": "22 Coffee Ln, City",
+      "phone": "555-111-2222",
+      "website": "https://example.com",
+      "image": "suncafe.webp",
+      "membership": 1,
+      "description": "Coffee and bakery."
+    }
+  ]
+}
