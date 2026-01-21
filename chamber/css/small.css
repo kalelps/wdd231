@@ -42,7 +42,6 @@ nav a.active {
   background-color: #003366;
 }
 
-/* Main */
 main {
   max-width: 1200px;
   margin: auto;
@@ -57,7 +56,6 @@ main {
   margin-right: 0.5rem;
 }
 
-/* Directory */
 #members.grid {
   display: grid;
   gap: 1rem;
@@ -78,4 +76,31 @@ footer {
   background-color: #003366;
   color: white;
   text-align: center;
+}
+
+#menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "✕";
+}
+
+/* Mobile nav */
+nav {
+  display: none;
+  flex-direction: column;
+}
+
+nav.open {
+  display: flex;
 }

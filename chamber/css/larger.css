@@ -1,7 +1,11 @@
 @media (min-width: 768px) {
 
+  #menu {
+    display: none;
+  }
+
   nav {
-    display: flex;
+    display: flex !important;
     justify-content: center;
   }
 
