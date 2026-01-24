@@ -12,7 +12,6 @@ header, nav, main, footer {
   padding: 1rem;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -25,9 +24,14 @@ header img {
   width: 50px;
 }
 
-/* Navigation */
 nav {
   background-color: #0055a5;
+  display: none;
+  flex-direction: column;
+}
+
+nav.open {
+  display: flex;
 }
 
 nav a {
@@ -71,7 +75,6 @@ main {
   background-color: #f9f9f9;
 }
 
-/* Footer */
 footer {
   background-color: #003366;
   color: white;
@@ -95,12 +98,52 @@ footer {
   content: "✕";
 }
 
-/* Mobile nav */
-nav {
-  display: none;
-  flex-direction: column;
+/* ---------- HOME PAGE ---------- */
+
+/* Hero */
+.hero {
+  position: relative;
 }
 
-nav.open {
-  display: flex;
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+
+.cta {
+  display: inline-block;
+  background-color: #0055a5;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+/* Sections spacing */
+.events,
+.weather,
+.spotlights {
+  margin: 1.5rem 0;
+}
+
+/* Spotlights */
+#spotlight-container {
+  display: grid;
+  gap: 1rem;
 }
