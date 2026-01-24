@@ -12,7 +12,8 @@ async function getWeather() {
       `Temperature: ${Math.round(data.list[0].main.temp)}°C`;
 
     document.getElementById("weather-desc").textContent =
-      data.list[0].weather[0].description;
+  data.list[0].weather[0].description.replace(/\b\w/g, l => l.toUpperCase());
+
 
     const forecastDiv = document.getElementById("forecast");
     forecastDiv.innerHTML = "";
@@ -70,3 +71,12 @@ async function loadSpotlights() {
 }
 
 loadSpotlights();
+
+// ----- HAMBURGER MENU -----
+const menuButton = document.querySelector("#menu");
+const nav = document.querySelector("nav");
+
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  menuButton.classList.toggle("open");
+});
