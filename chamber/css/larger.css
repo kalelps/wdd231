@@ -36,3 +36,39 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/*----- JOIN PAGE ----- */
+
+@media (min-width: 768px) {
+
+  .join-page {
+    display: block;
+  }
+
+  .join-page .join-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .join-page .membership-cards {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .join-page .card {
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

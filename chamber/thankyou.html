@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | City Chamber of Commerce</title>
-  <meta name="description" content="Welcome to the City Chamber of Commerce. Supporting local businesses, promoting economic growth, and connecting our community.">
+  <title>Thank You | City Chamber of Commerce</title>
+  <meta name="description"
+    content="Thank you for applying to join the City Chamber of Commerce. We appreciate your interest in supporting and growing our local business community.">
   <meta name="author" content="Gabriel Kalel Perez Sanchez">
   <link rel="icon" href="images/favicon.ico">
-  <meta property="og:title" content="Home | City Chamber of Commerce">
-  <meta property="og:description" content="Discover events, weather updates, and featured businesses from the City Chamber of Commerce.">
-  <meta property="og:image" content="https://kalelps.github.io/wdd231/chamber/images/og-image.jpg">
-  <meta property="og:url" content="https://kalelps.github.io/wdd231/chamber/index.html">
+  <meta property="og:title" content="Thank You | City Chamber of Commerce">
+  <meta property="og:description"
+    content="Thank you for submitting your membership application to the City Chamber of Commerce.">
+  <meta property="og:image"
+    content="https://kalelps.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url"
+    content="https://kalelps.github.io/wdd231/chamber/thankyou.html">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/small.css">
   <link rel="stylesheet" href="css/larger.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="scripts/home.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
 <header>
@@ -27,42 +33,27 @@
 </header>
 
 <nav id="navigation">
-  <a href="index.html" class="active">Home</a>
+  <a href="index.html">Home</a>
   <a href="directory.html">Directory</a>
-  <a href="Discover.html">Discover</a>
-  <a href="Join.html">Join</a>
-  <a href="Contact.html">Contact</a>
+  <a href="discover.html">Discover</a>
+  <a href="join.html">Join</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-
-<main>
-
-  <section class="hero">
-    <img src="images/hero.webp" alt="City skyline">
-    <div class="hero-text">
-      <h2>Welcome to the City Chamber of Commerce</h2>
-      <a href="#" class="cta">Join the Chamber</a>
-    </div>
+<main class="thankyou">
+  <section class="thankyou-card">
+    <h2>Thank You for Joining!</h2>
+    <p>We have received your membership application. Here is a summary of the information you submitted:</p>
+    <ul class="submitted-info">
+      <li><strong>First Name:</strong> <span id="firstName"></span></li>
+      <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
+      <li><strong>Business Name:</strong> <span id="business"></span></li>
+      <li><strong>Submitted On:</strong> <span id="timestamp"></span></li>
+    </ul>
+    <a href="index.html" class="cta">Return to Home</a>
   </section>
-
-  <section class="events">
-    <h2>Current Events</h2>
-    <p>Business Networking Night – April 20</p>
-    <p>Community Job Fair – May 5</p>
-  </section>
-
-  <section class="weather">
-    <h2>Weather</h2>
-    <p id="current-temp"></p>
-    <p id="weather-desc"></p>
-    <div id="forecast"></div>
-  </section>
-
-  <section class="spotlights">
-    <h2>Member Spotlights</h2>
-    <div id="spotlight-container"></div>
-  </section>
-
 </main>
 
 <footer>
@@ -70,6 +61,5 @@
   <p>Gabriel Kalel Perez Sanchez | WDD 231</p>
   <p id="lastModified"></p>
 </footer>
-
 </body>
 </html>
