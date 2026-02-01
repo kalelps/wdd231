@@ -73,23 +73,20 @@
   }
 }
 
-/* ----- Thank You Page ----- */
+/* ===== THANK YOU PAGE ===== */
 
 @media (min-width: 768px) {
-  .thank-you {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    text-align: center;
+
+  .thankyou {
+    padding: 3rem;
   }
 
-  .thank-you h1 {
-    font-size: 2.5rem;
+  .thankyou-card {
+    padding: 2.5rem;
   }
 
-  .thank-you p {
-    font-size: 1.2rem;
+  .submitted-info {
+    font-size: 1rem;
   }
 }
+

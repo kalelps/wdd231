@@ -6,6 +6,12 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #222;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  height: 100%;
 }
 
 header, nav, main, footer {
@@ -231,7 +237,58 @@ dialog::backdrop {
 
 /* ===== THANK YOU PAGE ===== */
 
-.thank-you {
-  padding: 2rem;
+.thankyou {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-card h2 {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.thankyou-card p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.submitted-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.submitted-info li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.submitted-info li:last-child {
+  border-bottom: none;
+}
+
+.thankyou .cta {
+  display: block;
+  text-align: center;
+  background-color: #004080;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.thankyou .cta:hover {
+  background-color: #0066cc;
 }
