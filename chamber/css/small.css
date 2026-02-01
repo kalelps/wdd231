@@ -228,3 +228,10 @@ dialog::backdrop {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
 }
+
+/* ===== THANK YOU PAGE ===== */
+
+.thank-you {
+  padding: 2rem;
+  text-align: center;
+}
