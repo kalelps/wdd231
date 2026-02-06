@@ -292,3 +292,14 @@ dialog::backdrop {
 .thankyou .cta:hover {
   background-color: #0066cc;
 }
+
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "visit"
+    "cards";
+}
+
+.visit { grid-area: visit; }
+.cards { grid-area: cards; }
+
