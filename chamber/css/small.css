@@ -306,8 +306,6 @@ dialog::backdrop {
 }
 
 .visit { grid-area: visit; }
-.cards { grid-area: cards; }
-
 .cards article img {
   width: 100%;
   height: 200px;
