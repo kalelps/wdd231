@@ -22,6 +22,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
+    flex: 1;
   }
 
   .hero {
@@ -103,13 +104,15 @@
   }
 }
 
-@media (min-width: 1025px) {
-  .discover-grid {
-    grid-template-areas:
-      "visit cards"
-      "visit cards";
-    grid-template-columns: 1fr 3fr;
+/* ===== DISCOVER PAGE (LARGE) ===== */
+
+@media (min-width: 768px) {
+  main.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+}
 
   .cards {
     grid-template-columns: repeat(3, 1fr);
@@ -119,4 +122,3 @@
     filter: brightness(1.1);
     transform: scale(1.03);
   }
-}
