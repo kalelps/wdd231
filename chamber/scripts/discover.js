@@ -17,3 +17,12 @@ places.forEach(place => {
 
   container.appendChild(card);
 });
+
+// ----- HAMBURGER MENU -----
+const menuButton = document.querySelector("#menu");
+const nav = document.querySelector("nav");
+
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  menuButton.classList.toggle("open");
+});
