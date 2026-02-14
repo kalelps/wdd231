@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Temple of Trujillo, Peru",
+    "size": 12,
+    "imageUrl": "images/temple_1.webp",
+    "description": "A detailed 3D printed model of the Trujillo Peru Temple, capturing its elegant structure and symbolic architecture.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Christus Statue by Thorvaldsen",
+    "size": 25,
+    "imageUrl": "images/temple_2.webp",
+    "description": "A precise reproduction of the Thorvaldsen Christus statue, representing peace and faith.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Temple of Los Olivos, Peru",
+    "size": 10,
+    "imageUrl": "images/temple_3.webp",
+    "description": "Miniature 3D model of the Los Olivos Peru Temple.",
+    "models": "Marble, White, White Matte",
+    "available": false
+  },
+  {
+    "name": "Temple of Lima, Peru",
+    "size": 35,
+    "imageUrl": "images/temple_4.webp",
+    "description": "Faithfully designed 3D replica of the Lima Peru Temple.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Temple of Salt Lake City, USA",
+    "size": 20,
+    "imageUrl": "images/temple_5.webp",
+    "description": "A timeless 3D model of the Salt Lake City Temple.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Temple of Arequipa, Peru",
+    "size": 40,
+    "imageUrl": "images/temple_6.webp",
+    "description": "Elegant 3D printed version of the Arequipa Peru Temple.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Temple of Moses Lake Washington, USA",
+    "size": 40,
+    "imageUrl": "images/temple_7.webp",
+    "description": "3D printed version of the Moses Lake Washington Temple.",
+    "models": "Marble, White, White Matte",
+    "available": true
+  },
+  {
+    "name": "Temple of Oaxaca, Mexico",
+    "size": 40,
+    "imageUrl": "images/temple_8.webp",
+    "description": "Detailed 3D printed version of the Oaxaca Mexico Temple.",
+    "models": "Marble, White, White Matte",
+    "available": false
+  },
+  {
+    "name": "Mini Temple Edition",
+    "size": 8,
+    "imageUrl": "images/temple_1.webp",
+    "description": "Compact collectible edition temple.",
+    "models": "White Matte",
+    "available": true
+  },
+  {
+    "name": "Premium Collector Temple",
+    "size": 50,
+    "imageUrl": "images/temple_2.webp",
+    "description": "Large premium edition temple model.",
+    "models": "Marble",
+    "available": true
+  },
+  {
+    "name": "Architectural Study Model",
+    "size": 30,
+    "imageUrl": "images/temple_3.webp",
+    "description": "Educational architectural study model.",
+    "models": "White",
+    "available": true
+  },
+  {
+    "name": "Limited Edition Temple",
+    "size": 45,
+    "imageUrl": "images/temple_4.webp",
+    "description": "Limited run detailed temple replica.",
+    "models": "Marble",
+    "available": true
+  },
+  {
+    "name": "Modern Temple Concept",
+    "size": 28,
+    "imageUrl": "images/temple_5.webp",
+    "description": "Modern architectural temple concept.",
+    "models": "White Matte",
+    "available": true
+  },
+  {
+    "name": "Heritage Temple Replica",
+    "size": 32,
+    "imageUrl": "images/temple_6.webp",
+    "description": "Historic heritage temple recreation.",
+    "models": "Marble",
+    "available": false
+  },
+  {
+    "name": "Exclusive Master Temple",
+    "size": 60,
+    "imageUrl": "images/temple_7.webp",
+    "description": "High detail master scale temple model.",
+    "models": "Marble",
+    "available": true
+  }
+]
