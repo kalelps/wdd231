@@ -3,57 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Print3d - Our Products</title>
-  <meta name="description" content="Page showing the products and 3D sculptures available for online ordering.">
+
+  <title>Our Products | Adam's Store</title>
+
+  <meta name="description" content="Explore handcrafted 3D printed LDS temple models and religious sculptures available at Adam's Store.">
   <meta name="author" content="Gabriel Kalel Perez Sanchez">
+
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="js/main.js" defer></script>
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Adam's Store - 3D Printed Temple Models">
+  <meta property="og:description" content="Discover detailed 3D printed LDS temple models and religious sculptures.">
+  <meta property="og:image" content="https://kalelps.github.io/final/images/preview.webp">
+  <meta property="og:url" content="https://kalelps.github.io/final/gallery.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/main.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
+
 <header class="navbar">
   <div class="logo">
     <a href="index.html">
-      <img src="images/logo.png" alt="Print3d Logo" class="logo-img">
-      <span class="logo-text">Print3d</span>
+      <img src="images/logo.png" alt="Adam's Store Logo" class="logo-img">
+      <span class="logo-text">Adam's Store</span>
     </a>
   </div>
 
-  <nav class="nav-links">
-    <a href="contact.html">Contact Us</a>
+  <nav class="nav-links" id="primary-nav">
+    <a href="index.html">Home</a>
     <a href="gallery.html" class="active">Our Products</a>
+    <a href="contact.html">Contact Us</a>
   </nav>
 
-    <!-- Mobile Menu -->
-  <div class="burger" id="burger-menu">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <!-- Accessible Mobile Menu Button -->
+  <button class="burger" id="burger-menu" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-  <!-- Main -->
-  <main class="gallery-page">
+<!-- ================= MAIN ================= -->
+
+<main class="gallery-page">
+
+  <section class="gallery-intro">
     <h1>Our 3D Printed Creations</h1>
-    <p>Explore our collection of custom 3D-printed products.</p>
+    <p>
+      Explore our collection of detailed 3D printed LDS temple models and religious sculptures. 
+      Each piece is crafted with precision and designed to inspire faith and appreciation for sacred architecture.
+    </p>
+  </section>
 
-    <section class="gallery" id="gallery"></section>
+  <!-- Dynamic Gallery (Rendered by main.js) -->
+  <section class="gallery" id="gallery" aria-live="polite"></section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-      <h2>Want to make a special order? <br> Contact us!</h2>
-      <a href="contact.html" class="btn-hero">Go to Contact Page</a>
-    </section>
-  </main>
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Looking for a custom model?</h2>
+    <p>We can create personalized 3D printed temple models tailored to your needs.</p>
+    <a href="contact.html" class="btn-hero">Request a Custom Order</a>
+  </section>
 
-  <div id="tooltip" class="tooltip"></div>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Print3d Models | <a href="siteplan.html">Siteplan</a></p>
-  </footer>
+<!-- Tooltip (Used by main.js) -->
+<div id="tooltip" class="tooltip" role="tooltip"></div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  <p>
+    <a href="https://youtube.com/tu-video" target="_blank" rel="noopener">
+      Project Demonstration Video
+    </a>
+  </p>
+
+  <p>
+    <a href="attributions.html">Attributions</a> |
+    <a href="siteplan.html">Site Plan</a>
+  </p>
+
+  <p>&copy; 2026 Adam's Store | Gabriel Kalel Perez Sanchez</p>
+</footer>
+
 </body>
 </html>

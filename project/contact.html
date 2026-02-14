@@ -3,72 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Print3d - Contact Us</title>
-  <meta name="description" content="Contact page sent an email with a personalized message and a reason for the message.">
+
+  <title>Contact Us | Adam's Store</title>
+
+  <meta name="description" content="Contact Adam's Store to request custom 3D printed LDS temple models, ask questions, or send feedback. We are happy to assist you.">
   <meta name="author" content="Gabriel Kalel Perez Sanchez">
+
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="js/main.js" defer></script>
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Contact Adam's Store - 3D Printed LDS Temple Models">
+  <meta property="og:description" content="Send us your questions, custom requests, or feedback about our 3D printed temple models.">
+  <meta property="og:image" content="https://kalelps.github.io/final/images/preview.webp">
+  <meta property="og:url" content="https://kalelps.github.io/final/contact.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/main.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
+
 <header class="navbar">
   <div class="logo">
     <a href="index.html">
-      <img src="images/logo.png" alt="Print3d Logo" class="logo-img" loading="lazy">
-      <span class="logo-text">Print3d</span>
+      <img src="images/logo.png" alt="Adam's Store Logo" class="logo-img">
+      <span class="logo-text">Adam's Store</span>
     </a>
   </div>
 
-  <nav class="nav-links">
-    <a href="contact.html">Contact Us</a>
-    <a href="gallery.html" class="active">Our Products</a>
+  <nav class="nav-links" id="primary-nav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Our Products</a>
+    <a href="contact.html" class="active">Contact Us</a>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="burger" id="burger-menu">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <!-- Accessible Mobile Menu Button -->
+  <button class="burger" id="burger-menu" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
-      <!-- Mobile Menu -->
+<!-- ================= MAIN ================= -->
 
-  <main class="contact-page">
-    <section class="contact-container">
-      <h1>Contact Us</h1>
-      <p>If you have questions, requests, or want to make a complaint, send us a message! :)</p>
+<main class="contact-page">
 
-      <form id="contact-form">
-        <label for="name">Name (optional):</label>
-        <input type="text" id="name" name="name" placeholder="Your name">
+  <section class="contact-container">
+    <h1>Contact Us</h1>
+    <p>
+      Have questions, special requests, or feedback? 
+      We'd love to hear from you. Send us a message below.
+    </p>
 
-        <label for="email">Email <span class="required">*</span>:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    <form id="contact-form" novalidate>
 
-        <label for="subject">Reason for Message:</label>
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name (Optional)</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your name"
+          autocomplete="name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">
+          Email Address <span class="required">*</span>
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="you@example.com"
+          required
+          autocomplete="email">
+      </div>
+
+      <!-- Subject -->
+      <div class="form-group">
+        <label for="subject">Reason for Message</label>
         <select id="subject" name="subject">
           <option value="general">General Inquiry</option>
-          <option value="order">Order Request</option>
+          <option value="order">Custom Order Request</option>
           <option value="feedback">Feedback</option>
           <option value="support">Technical Support</option>
         </select>
+      </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">
+          Message <span class="required">*</span>
+        </label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="6" 
+          placeholder="Write your message here..."
+          required></textarea>
+      </div>
 
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <!-- Submit -->
+      <button type="submit" class="btn-submit">
+        Send Message
+      </button>
 
-  <footer>
-    <p>&copy; 2025 Print3d Models | <a href="siteplan.html">Siteplan</a></p>
-  </footer>
+    </form>
+
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  <p>
+    <a href="https://youtube.com/tu-video" target="_blank" rel="noopener">
+      Project Demonstration Video
+    </a>
+  </p>
+
+  <p>
+    <a href="attributions.html">Attributions</a> |
+    <a href="siteplan.html">Site Plan</a>
+  </p>
+
+  <p>&copy; 2026 Adam's Store | Gabriel Kalel Perez Sanchez</p>
+</footer>
+
 </body>
 </html>
-

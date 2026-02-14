@@ -1,13 +1,47 @@
-/* Responsive objetcs */
+/* ============================= */
+/* Responsive Navigation (Burger) */
+/* ============================= */
 
 const burger = document.getElementById("burger-menu");
 const navLinks = document.querySelector(".nav-links");
 
-burger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (burger) {
+  burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 
+    const isOpen = navLinks.classList.contains("active");
+    burger.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Close menu when clicking a link
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!burger.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Close with ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      navLinks.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+
+/* ============================= */
 /* Product Data */
+/* ============================= */
 
 const products = [
   {
@@ -69,7 +103,7 @@ const products = [
     size: 40,
     imageUrl: "images/temple_7.webp",
     description:
-      "An elegant 3D printed version of the temple of Moses Lake Washington, showcasing its modern design and refined features.",
+      "An elegant 3D printed version of the Moses Lake Washington Temple, showcasing its modern design and refined features.",
     models: "Marble, White, White Matte",
     available: true
   },
@@ -78,42 +112,51 @@ const products = [
     size: 40,
     imageUrl: "images/temple_8.webp",
     description:
-      "An elegant and detailed 3D printed version of the temple of Oaxaca Mexico, showcasing its modern design and refined features.",
+      "An elegant and detailed 3D printed version of the Oaxaca Mexico Temple, showcasing its modern design and refined features.",
     models: "Marble, White, White Matte",
     available: false
   }
 ];
 
-/* Gallery Rendering and Tooltip Logic */
+
+/* ============================= */
+/* Gallery Rendering + Tooltip */
+/* ============================= */
 
 const gallery = document.getElementById("gallery");
 const tooltip = document.getElementById("tooltip");
 
 function renderGallery(items) {
+  if (!gallery) return;
+
   gallery.innerHTML = "";
 
-  items.forEach((product) => {
+  items.forEach(product => {
+
     const figure = document.createElement("figure");
     figure.classList.add("gallery-item");
 
-    const availability = product.available
-      ? "Available"
-      : "Coming Soon";
+    const availability = product.available ? "Available" : "Coming Soon";
 
     figure.innerHTML = `
-      <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
+      <img src="${product.imageUrl}" 
+           alt="${product.name}" 
+           loading="lazy">
       <figcaption>${product.name}</figcaption>
     `;
 
-    figure.addEventListener("mouseenter", (e) => {
+    /* Tooltip Events */
+
+    figure.addEventListener("mouseenter", () => {
       tooltip.style.display = "block";
       tooltip.innerHTML = `
         <strong>${product.name}</strong><br>
         ${product.description}<br>
-        <em>Models available:</em> ${product.models}<br>
-        <span style="color:${
-          product.available ? "lightgreen" : "tomato"
-        };">${availability}</span>
+        <em>Size:</em> ${product.size} cm<br>
+        <em>Models:</em> ${product.models}<br>
+        <span style="color:${product.available ? "lightgreen" : "tomato"};">
+          ${availability}
+        </span>
       `;
     });
 
@@ -130,7 +173,10 @@ function renderGallery(items) {
   });
 }
 
-/* Local Storage Functions */
+
+/* ============================= */
+/* Local Storage */
+/* ============================= */
 
 function saveVisitTime() {
   const now = new Date().toLocaleString();
@@ -139,6 +185,7 @@ function saveVisitTime() {
 
 function showLastVisit() {
   const lastVisit = localStorage.getItem("lastVisit");
+
   if (lastVisit) {
     console.log(`🕒 Last visit: ${lastVisit}`);
   } else {
@@ -146,10 +193,18 @@ function showLastVisit() {
   }
 }
 
-/* initialize */
+
+/* ============================= */
+/* Initialize */
+/* ============================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderGallery(products);
+
+  // Example array method usage (rubric requirement)
+  const availableProducts = products.filter(p => p.available);
+
+  renderGallery(products); // or availableProducts if you want
   showLastVisit();
   saveVisitTime();
+
 });

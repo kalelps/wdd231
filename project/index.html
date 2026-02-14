@@ -3,18 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adam's Store - Home</title>
-  <meta name="description" content="Home page where you can find information about us and also some call to action to attract the customer to see our.">
+
+  <title>Adam's Store | 3D Printed LDS Temple Models</title>
+
+  <meta name="description" content="Discover handcrafted 3D printed LDS temple models and custom religious sculptures designed to inspire faith and bring sacred architecture into your home.">
   <meta name="author" content="Gabriel Kalel Perez Sanchez">
+
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="js/main.js" defer></script>
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Adam's Store - 3D Printed LDS Temple Models">
+  <meta property="og:description" content="Explore detailed 3D printed LDS temple models and custom religious sculptures.">
+  <meta property="og:image" content="https://kalelps.github.io/final/images/preview.webp">
+  <meta property="og:url" content="https://kalelps.github.io/final/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/main.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
 <header class="navbar">
   <div class="logo">
     <a href="index.html">
@@ -23,68 +36,90 @@
     </a>
   </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="primary-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">Our Products</a>
     <a href="contact.html">Contact Us</a>
-    <a href="gallery.html" class="active">Our Products</a>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="burger" id="burger-menu">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <!-- Accessible Mobile Menu Button -->
+<button class="burger" id="burger-menu" aria-label="Open navigation" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 </header>
 
-  <!-- Page content -->
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Bring Sacred Architecture to Life</h1>
-        <p>Discover our 3D-printed temple models designed with precision and devotion.</p>
-        <a href="Gallery.html" class="btn-hero">Explore Our Collection</a>
-      </div>
-    </section>
+<main>
 
-    <section class="about">
-      <div class="about-content">
-        <h2>About Adam's Store</h2>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bring Sacred Architecture to Life</h1>
+      <p>Discover our 3D-printed temple models designed with precision and devotion.</p>
+      <a href="gallery.html" class="btn-hero">Explore Our Collection</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <h2>About Adam's Store</h2>
+      <p>
+        Adam's Store is a small business dedicated to creating high-quality 3D-printed LDS temple models and religious sculptures. 
+        We specialize in custom dedications and personalized designs that help bring faith and sacred symbolism into your home.
+      </p>
+    </div>
+  </section>
+
+  <!-- Info Section 1 -->
+  <section class="info-section">
+    <div class="info-container">
+      <img src="images/picture_1.webp" 
+           alt="Close view of a 3D printing process creating a temple model" 
+           class="info-image" 
+           loading="lazy">
+      <div class="info-text">
+        <h2>Precision and Detail in Every Model</h2>
         <p>
-          Adam's Store is a small business dedicated to selling 3D-printed sculptures of custom LDS temples, LDS decorative sculptures, and religious sculptures to bring the spirit into the home. We take special orders and dedications and focus on improving the presentation of our models.
+          Each sculpture is carefully printed, polished, and refined to resemble the original sacred structures with remarkable accuracy and craftsmanship.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Info Section 1 -->
-    <section class="info-section">
-      <div class="info-container">
-        <img src="images/picture_1.webp" alt="3D Printing Process" class="info-image" loading="lazy">
-        <div class="info-text">
-          <h1>Precision and Detail in Every Model</h1>
-          <p>
-            Our printing process strives to make the models as detailed as possible; they are polished and detailed to closely resemble the original sculptures and structures on which they are based.
-          </p>
-        </div>
+  <!-- Info Section 2 -->
+  <section class="info-section reverse">
+    <div class="info-container">
+      <div class="info-text">
+        <h2>Built with Passion and Purpose</h2>
+        <p>
+          Our sculptures are more than decorative pieces — they are meaningful tributes of faith designed to inspire and uplift families in their daily lives.
+        </p>
       </div>
-    </section>
+      <img src="images/picture_2.webp" 
+           alt="Finished 3D printed LDS temple model on display" 
+           class="info-image" 
+           loading="lazy">
+    </div>
+  </section>
 
-    <!-- Info Section 2 (inverted) -->
-    <section class="info-section reverse">
-      <div class="info-container">
-        <div class="info-text">
-          <h1>Built with Passion and Purpose</h1>
-          <p>
-            Our sculptures are not only meant to be more than just decorative for the home; we aim for them to be a tribute and reminder of faith and to bring the spirit into the home.
-          </p>
-        </div>
-        <img src="images/picture_2.webp" alt="3D Printed Model Showcase" class="info-image" loading="lazy">
-      </div>
-    </section>
-  </main>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Adam's Store Models | <a href="siteplan.html">Siteplan</a></p>
-  </footer>
+<footer>
+  <p>
+    <a href="https://youtube.com/tu-video" target="_blank" rel="noopener">
+      Project Demonstration Video
+    </a>
+  </p>
+
+  <p>
+    <a href="attributions.html">Attributions</a> |
+    <a href="siteplan.html">Site Plan</a>
+  </p>
+
+  <p>&copy; 2026 Adam's Store | Gabriel Kalel Perez Sanchez</p>
+</footer>
+
 </body>
 </html>
-
