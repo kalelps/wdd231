@@ -33,36 +33,51 @@ if (burger) {
 const gallery = document.getElementById("gallery");
 const tooltip = document.getElementById("tooltip");
 
+// ===========================
+// ASYNC FUNCTION (Asynchronous Data Fetch)
+// ===========================
 async function getProducts() {
-  const response = await fetch("data/products.json");
+  const response = await fetch("data/products.json"); // Await pauses execution until data loads
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
-  return await response.json();
+  return await response.json(); // Returns parsed JSON data
 }
-
-
 
 function renderGallery(products) {
   if (!gallery) return;
 
   gallery.innerHTML = "";
 
-  const sorted = products.sort((a, b) => b.size - a.size);
+  // ===========================
+  // ARRAY METHOD: sort()
+  // ===========================
+  const sorted = products.sort((a, b) => b.size - a.size); 
+  // Sorts products by size (largest to smallest)
 
   sorted.forEach(product => {
-    const figure = document.createElement("figure");
+
+    // ===========================
+    // DOM MANIPULATION
+    // ===========================
+    const figure = document.createElement("figure"); // Create new HTML element
     figure.classList.add("gallery-item");
 
     const availability = product.available ? "Available" : "Coming Soon";
 
+    // ===========================
+    // TEMPLATE LITERALS
+    // ===========================
     figure.innerHTML = `
       <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
       <figcaption>${product.name}</figcaption>
     `;
+    // Uses ${} to dynamically insert data into HTML
 
     figure.addEventListener("mouseenter", () => {
       tooltip.style.display = "block";
+
+      // TEMPLATE LITERALS again
       tooltip.innerHTML = `
         <strong>${product.name}</strong><br>
         ${product.description}<br>
@@ -83,7 +98,11 @@ function renderGallery(products) {
       tooltip.style.display = "none";
     });
 
-    gallery.appendChild(figure);
+    // ===========================
+    // DOM MANIPULATION
+    // ===========================
+    gallery.appendChild(figure); 
+    // Adds dynamically created element to the page
   });
 }
 
@@ -101,12 +120,20 @@ function showLastVisit() {
   }
 }
 
+// ===========================
+// TRY / CATCH BLOCK
+// ===========================
 async function initialize() {
   try {
+    // ARRAY METHOD: filter()
     const products = await getProducts();
     const filtered = products.filter(p => p.name && p.imageUrl);
+    // Filters out invalid products
+
     renderGallery(filtered);
+
   } catch (error) {
+    // Catches errors if fetch fails
     console.error("Error loading products:", error);
   }
 
