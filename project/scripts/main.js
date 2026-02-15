@@ -34,12 +34,14 @@ const gallery = document.getElementById("gallery");
 const tooltip = document.getElementById("tooltip");
 
 async function getProducts() {
-  const response = await fetch("../data/members.json");
+  const response = await fetch("data/products.json");
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
   return await response.json();
 }
+
+
 
 function renderGallery(products) {
   if (!gallery) return;
